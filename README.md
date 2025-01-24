@@ -1,6 +1,6 @@
 # Repositório dedicado aos exercícios e desafios do bootcampo python da Jornada de Dados.
 
-A Jornada de Dados é um roadmap de estudos voltado para a engenharia de dados, saiba mais [clicando aqui|https://suajornadadedados.com.br/].
+A Jornada de Dados é um roadmap de estudos voltado para a engenharia de dados, saiba mais [clicando aqui](https://suajornadadedados.com.br/).
 
 ## Aula 01
 
