@@ -24,7 +24,7 @@ def desafio() -> None:
     Este desafio tem como objetivo calcular o valor bônus recebido por uma pessoa em cima de seu salário mensal.
     É preciso informar o nome, em seguida será solicitado o salário e o bônus percentual a ser calculado.
 
-    A fórmula de cálculé 1.000,00 + (salário * bônus).
+    A fórmula de cálculo é 1.000,00 + (salário * bônus).
 
     É possível cancelar a operação pressionando ctrl + c a qualquer momento.
     """
