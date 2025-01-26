@@ -50,4 +50,32 @@ A Jornada de Dados é um roadmap de estudos voltado para a engenharia de dados, 
 - Classificador de Números
 - Conversão de Tipo com Validação
 
+#### Desafio
+
 - Desafio - Refatorar o projeto de KPI da aula anterior evitando Bugs!
+
+## Aula 03
+
+### Estruturas de Controle de Fluxo
+- Exercício 1: Verificação de Qualidade de Dados
+- Exercício 2: Classificação de Dados de Sensor
+- Exercício 3: Filtragem de Logs por Severidade
+- Exercício 4: Validação de Dados de Entrada
+- Exercício 5: Detecção de Anomalias em Dados de Transações
+
+### For
+- Exercício 6: Contagem de Palavras em Textos
+- Exercício 7: Normalização de Dados
+- Exercício 8: Filtragem de Dados Faltantes
+- Exercício 9: Extração de Subconjuntos de Dados
+- Exercício 10: Agregação de Dados por Categoria
+
+### While
+- Exercício 11: Leitura de Dados até Flag
+- Exercício 12: Validação de Entrada
+- Exercício 13: Consumo de API Simulado
+- Exercício 14: Tentativas de Conexão
+- Exercício 15: Processamento de Dados com Condição de Parada
+
+#### Desafio
+- Integre na solução anterior um fluxo de While que repita o fluxo até que o usuário insira as informações corretas.
