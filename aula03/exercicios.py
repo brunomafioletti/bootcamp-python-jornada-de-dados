@@ -1,4 +1,3 @@
-from curses.textpad import Textbox
 from typing import Any, Callable, Union
 
 
