@@ -1,4 +1,3 @@
-from math import prod
 from typing import Union
 
 def classificacao_numero(numero: Union[int, float]) -> str:
@@ -8,7 +7,7 @@ def classificacao_numero(numero: Union[int, float]) -> str:
         return "positivo"
 
 
-def exercicio01() -> None:
+def exercicio() -> None:
     """
     Este desafio tem como objetivo calcular o valor bônus recebido por uma pessoa em cima de seu salário mensal.
     É preciso informar o nome, em seguida será solicitado o salário e o bônus percentual a ser calculado.
@@ -82,7 +81,7 @@ def exercicio02() -> None:
 
 
 def exercicio03() -> None:
-    livro: dict[str, Union[str, int, dict[str, str]]] = {
+    livro: dict[str, str | list[dict[str, str]] | int] = {
         "titulo": "Aprendendo Python",
         "autores": [
             {
@@ -381,14 +380,30 @@ def exercicio15() -> None:
     print(caracteres)
 
 
-    # 16. Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
-    # 17. Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
-    # 18. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
-    # 19. Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
-    # 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+def exercicio16(numeros: list[int | float]) -> int | float:
+    try:
+        soma: int | float = sum(numeros)
+        print(f"A soma é {soma}.")
+    except TypeError:
+        print(f"Deve ser informada uma lista de números, exemplo: `[1,2,3]`.")
 
-    # Desafio. Refatorar nosso código usando Dicionário, Type Hint e Funcões.
+
+def exercicio17(numero: int) -> bool:
+    if numero < 2:
+        return False
+
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+
+# 18. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+# 19. Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+# 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+
+# Desafio. Refatorar nosso código usando Dicionário, Type Hint e Funcões.
 
 
 if __name__ == '__main__':
-    exercicio15()
+    exercicio17(19)
