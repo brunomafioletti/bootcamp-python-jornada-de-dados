@@ -79,3 +79,39 @@ A Jornada de Dados é um roadmap de estudos voltado para a engenharia de dados, 
 
 #### Desafio
 - Integre na solução anterior um fluxo de While que repita o fluxo até que o usuário insira as informações corretas.
+
+## Aula 04
+
+### Type Hint
+- Exercício: Tipar o desafio da aula 03
+
+### Listas e Dicionários
+- Exercício 1: Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
+- Exercício 2: Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
+- Exercício 3: Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
+- Exercício 4: Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+- Exercício 5: Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
+
+#### Intermediários e Avançados
+- Exercício 6: Eliminação de Duplicatas
+- Exercício 7: Filtragem de Dados
+- Exercício 8: Ordenação Personalizada
+- Exercício 9: Agregação de Dados
+- Exercício 10: Divisão de Dados em Grupos
+
+#### Exercícios com dicionários
+- Exercício 11: Atualização de Dados
+- Exercício 12: Fusão de Dicionários
+- Exercício 13: Filtragem de Dados em Dicionário
+- Exercício 14: Extração de Chaves e Valores
+- Exercício 15: Contagem de Frequência de Itens
+
+### Funções
+- Exercício 16: Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+- Exercício 17: Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
+- Exercício 18: Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+- Exercício 19: Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+- Exercício 20: Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+
+### Desafio
+- Refatorar nosso código usando Dicionário, Type Hint e Funcões.

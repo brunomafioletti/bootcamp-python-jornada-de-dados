@@ -380,7 +380,7 @@ def exercicio15() -> None:
     print(caracteres)
 
 
-def exercicio16(numeros: list[int | float]) -> int | float:
+def exercicio16(numeros: list[int | float]) -> None:
     try:
         soma: int | float = sum(numeros)
         print(f"A soma é {soma}.")
@@ -398,12 +398,146 @@ def exercicio17(numero: int) -> bool:
     return True
 
 
-# 18. Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
-# 19. Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
-# 20. Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+# Exemplo usando recursividade
+# def inverte(texto: str) -> str:
+#     if len(texto) == 0:
+#         return texto
+#     return inverte(texto[1:]) + texto[0]
+
+
+def exercicio18(texto: str) -> None:
+    inverso: str = ""
+    for char in texto:
+        inverso = char + inverso
+    print(inverso)
+
+
+def exercicio19(lista: list[int], numero: int) -> None:
+    pares: list = []
+    visto: set = set()
+
+    for num in lista:
+        complemento: int = abs(numero - num)
+        if complemento in visto:
+            pares.append((num, complemento))
+        visto.add(num)
+
+    print(pares)
+
+
+def merge_sort20(pessoas: list[str]) -> list[str]:
+    if len(pessoas) <= 1:
+        return pessoas
+
+    mid: int = len(pessoas) // 2
+    left: list[str] = merge_sort20(pessoas[:mid])
+    right: list[str] = merge_sort20(pessoas[mid:])
+
+    return merge20(left, right)
+
+
+def merge20(left: list[str], right: list[str]) -> list[str]:
+    sorted_list: list = []
+    while left and right:
+        if left[0] <= right[0]:
+            sorted_list.append(left.pop(0))
+        else:
+            sorted_list.append(right.pop(0))
+
+    sorted_list.extend(left or right)
+    return sorted_list
+
+
+def exercicio20(dicionario: dict) -> None:
+    keys: list[str] = list(dicionario.keys())
+    print(merge_sort20(keys))
+    # print sorted keys
+
 
 # Desafio. Refatorar nosso código usando Dicionário, Type Hint e Funcões.
+def classificacao_numero(numero: Union[int, float]) -> str:
+    """Classifica um número como positivo ou negativo."""
+    if numero < 0.0:
+        return "negativo"
+    else:
+        return "positivo"
+
+
+def obter_nome() -> str:
+    """Solicita e valida o nome do usuário."""
+    while True:
+        nome: str = input("Olá, por favor informe seu nome: ").strip()
+        if len(nome) == 0:
+            raise UserWarning("Você deve informar um nome.")
+        elif any(char.isdigit() for char in nome):
+            raise UserWarning("O nome não pode conter números ou caracteres especiais.")
+        else:
+            return nome
+
+
+def obter_salario() -> float:
+    """Solicita e valida o salário mensal do usuário."""
+    while True:
+        try:
+            salario: float = float(input("Informe seu salário mensal (exemplo: 3200.0): ").strip())
+            if classificacao_numero(salario) == "negativo":
+                raise UserWarning("O salário não pode ser um número negativo.")
+        except ValueError as e:
+            print("Você deve informar um número decimal.")
+        else:
+            return salario
+
+
+def obter_bonus() -> float:
+    """Solicita e valida a porcentagem do bônus."""
+    while True:
+        try:
+            porcentagem_bonus: float = float(input("Agora informe o bônus (entre 0.0 a 100.0): ").strip())
+            if porcentagem_bonus < 0.0 or porcentagem_bonus > 100:
+                raise UserWarning("O bônus deve ser entre 0 e 100.")
+        except ValueError:
+            print("Você deve informar um valor decimal.")
+        else:
+            return porcentagem_bonus
+
+
+def calcular_bonus(salario: float, porcentagem_bonus: float) -> float:
+    """Calcula o bônus com base no salário e na porcentagem fornecida."""
+    return 1_000 + salario * (porcentagem_bonus / 100)
+
+
+def desafio() -> None:
+    """
+    Este desafio tem como objetivo calcular o valor bônus recebido por uma pessoa em cima de seu salário mensal.
+    É preciso informar o nome, em seguida será solicitado o salário e o bônus percentual a ser calculado.
+
+    A fórmula de cálculo é 1.000,00 + (salário * bônus).
+
+    É possível cancelar a operação pressionando ctrl + c a qualquer momento.
+    """
+    while True:
+        try:
+            dados_usuario: dict[str, str | float] = {
+                "nome": obter_nome(),
+                "salario": obter_salario(),
+                "bonus": obter_bonus(),
+            }
+
+            valor_bonus: float = calcular_bonus(dados_usuario["salario"], dados_usuario["bonus"])
+            total: float = dados_usuario["salario"] + valor_bonus
+
+            print(
+                f"Olá, {dados_usuario['nome']}. Seu bônus neste ano é de {valor_bonus:.2f}, "
+                f"totalizando {total:.2f}."
+            )
+        except UserWarning as e:
+            print(e)
+        except KeyboardInterrupt:
+            print("\nSaindo...")
+            break
+        else:
+            break
 
 
 if __name__ == '__main__':
-    exercicio17(19)
+    desafio()
